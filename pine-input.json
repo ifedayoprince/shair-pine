@@ -1,0 +1,17 @@
+[
+	{
+		"type" : "options", 
+		"title" : "Language", 
+		"name" :"lang", 
+		"items" : [
+			{"key": "js", "value": "JavaScript"} 
+		]
+	}, 
+	{
+		"type": "notepad", 
+		"title": "Snippet", 
+		"name": "nid", 
+		"height": 45, 
+		"filext": "lang" 
+	}
+]
