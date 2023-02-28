@@ -8,7 +8,7 @@ app.on('offline', showError);
 
 function startPine() {
 	let code = document.querySelector('.code code')
-	app.fetch('get', `pine.notes.${app.params.note}`, (data)=>{
+	app.fetch(`pine.notes.${app.params.note}`).then((data)=>{
 		code.innerHTML = data.content;
 		// code.className = `h-full language-${data.lang}`;
 		
