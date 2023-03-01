@@ -2,16 +2,22 @@
 	{
 		"type" : "options", 
 		"title" : "Language", 
-		"name" :"lang", 
+		"name" :"lng", 
 		"items" : [
 			{"key": "js", "value": "JavaScript"} 
 		]
 	}, 
 	{
-		"type": "notepad", 
+		"type": "note", 
 		"title": "Snippet", 
-		"name": "nid", 
+		"name": "note", 
 		"height": 48, 
 		"filext": "lang" 
+	}, 
+	{
+		"type": "file", 
+		"title": "Images", 
+		"name": "imgs", 
+		"exts": "images/*"
 	}
 ]
