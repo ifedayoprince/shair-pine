@@ -8,12 +8,15 @@ app.on('offline', showError);
 
 function startPine() {
 	let code = document.querySelector('.code code')
+
 	app.fetch(`pine.notes.${app.params.note}`).then((data)=>{
+		data = data.data;
 		code.innerHTML = data.content;
 		// code.className = `h-full language-${data.lang}`;
-		
 		document.querySelector('#date').innerHTML = data.created.substring(0,10).replace(/\-/g, "/");
 		hljs.highlightAll();
+	}).catch((e)=>{
+		console.log(e.message)
 	});
 } 
 
