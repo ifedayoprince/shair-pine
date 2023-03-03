@@ -11,7 +11,11 @@ function startPine() {
 
 	app.fetch(`pine.notes.${app.params.note}`).then((data)=>{
 		data = data.data;
+		
+		document.querySelector('.total').classList.add('hidden');
 		code.innerHTML = data.content;
+		code.parentElement.classList.remove('hidden');
+		
 		// code.className = `h-full language-${data.lang}`;
 		document.querySelector('#date').innerHTML = data.created.substring(0,10).replace(/\-/g, "/");
 		hljs.highlightAll();
