@@ -2,7 +2,7 @@
 	{
 		"type" : "options", 
 		"title" : "Language", 
-		"name" :"lng", 
+		"name" :"lang", 
 		"items" : [
 			{"key": "js", "value": "JavaScript"} 
 		]
@@ -13,11 +13,5 @@
 		"name": "note", 
 		"height": 48, 
 		"filext": "lang" 
-	}, 
-	{
-		"type": "file", 
-		"title": "Images", 
-		"name": "imgs", 
-		"exts": "images/*"
 	}
 ]
