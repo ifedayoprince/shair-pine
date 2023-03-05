@@ -11,7 +11,7 @@
 		"type": "note", 
 		"title": "Snippet", 
 		"name": "note", 
-		"height": 48, 
+		"height": "45vh", 
 		"filext": "lang" 
 	}
 ]
