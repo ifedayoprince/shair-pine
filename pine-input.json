@@ -4,6 +4,7 @@
 		"title" : "Language", 
 		"name" :"lang", 
 		"items" : [
+			{"key":"py", "value":"Python"}, 
 			{"key": "js", "value": "JavaScript"} 
 		]
 	}, 
@@ -11,7 +12,7 @@
 		"type": "note", 
 		"title": "Snippet", 
 		"name": "note", 
-		"height": "45vh", 
+		"height": "medium", 
 		"filext": "lang" 
 	}
 ]
