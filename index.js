@@ -22,7 +22,9 @@ function startPine() {
 
 		let langs = {
 			js: "javascript",
-			py: "python"
+			py: "python", 
+			json:"json", 
+			xml:"xml"
 		}
 
 		script.src = `https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/languages/${langs[app.params.lang]}.min.js`

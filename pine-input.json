@@ -4,8 +4,10 @@
 		"title" : "Language", 
 		"name" :"lang", 
 		"items" : [
-			{"key":"py", "value":"Python"}, 
-			{"key": "js", "value": "JavaScript"} 
+			{"key": "py", "value": "Python"}, 
+			{"key": "js", "value": "JavaScript"}, 
+			{"key": "json", "value": "JSON"}, 
+			{"key": "xml", "value": "HTML/XML"}
 		]
 	}, 
 	{
