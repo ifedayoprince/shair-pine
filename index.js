@@ -22,8 +22,9 @@ function startPine() {
 
 	script.src = `https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/languages/${langs[app.params.lang]}.min.js`;
 	document.body.appendChild(script);
-	document.querySelector('.filename').innerText = (app.params.fname.split('.')[0]).toLowerCase();
-	document.querySelector('.filename .ext').innerText = `.${app.params.lang}`;
+	let fn = document.querySelector('.filename')
+	fn.innerText = (app.params.fname.split('.')[0]).toLowerCase();
+	fn.innerHTML += `<p class="ext text-lg text-gray-300">.${app.params.lang}</p>`;
 	code.className = `h-full language-${app.params.lang}`;
 
 	app.fetch(`pine.notes.${app.params.note}`).then(({data})=>{
