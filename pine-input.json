@@ -9,12 +9,16 @@
 			{"key": "json", "value": "JSON"}, 
 			{"key": "xml", "value": "HTML/XML"}
 		]
+	},
+	{
+		"type": "text", 
+		"title": "Name", 
+		"name": "fname"
 	}, 
 	{
 		"type": "note", 
 		"title": "Snippet", 
 		"name": "note", 
-		"height": "medium", 
-		"filext": "lang" 
+		"height": "large"
 	}
 ]

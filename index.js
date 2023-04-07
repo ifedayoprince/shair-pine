@@ -7,33 +7,34 @@ app.on('offline', showError);
 app.on('init', startPine);
 
 function startPine() {
-	let code = document.querySelector('.code code')
+	let code = document.querySelector('.code code');
 	var script = document.createElement("script");
 
-	app.fetch(`pine.notes.${app.params.note}`).then((data)=>{
-		data = data.data;
-		
+	code.ondbclick = (ev)=>{
+		navigator.clipboard.writeText(code.innerText.toString());
+	}
+	let langs = {
+		js: "javascript",
+		py: "python", 
+		json: "json", 
+		xml: "xml"
+	}
+
+	script.src = `https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/languages/${langs[app.params.lang]}.min.js`;
+	document.body.appendChild(script);
+	document.querySelector('.filename').innerText = (app.params.fname.split('.')[0]).toLowerCase();
+	document.querySelector('.filename .ext').innerText = `.${app.params.lang}`;
+	code.className = `h-full language-${app.params.lang}`;
+
+	app.fetch(`pine.notes.${app.params.note}`).then(({data})=>{
 		document.querySelector('.total').classList.add('hidden');
 		code.innerHTML = data.content;
 		code.parentElement.classList.remove('hidden');
 		
-		code.className = `h-full language-${app.params.lang}`;
 		document.querySelector('#date').innerHTML = data.created.substring(0,10).replace(/\-/g, "/");
-
-		let langs = {
-			js: "javascript",
-			py: "python", 
-			json:"json", 
-			xml:"xml"
-		}
-
-		script.src = `https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/languages/${langs[app.params.lang]}.min.js`
-		script.onload = ()=>{
-			hljs.highlightAll();
-		}
-		document.body.appendChild(script);
+		hljs.highlightAll();
 	}).catch((e)=>{
-		console.log(e.message)
+		code.innerHTML = 'Error'
 	});
 } 
 
