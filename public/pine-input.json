@@ -7,7 +7,11 @@
 			{"key": "py", "value": "Python"}, 
 			{"key": "js", "value": "JavaScript"}, 
 			{"key": "json", "value": "JSON"}, 
-			{"key": "xml", "value": "HTML/XML"}
+			{"key": "xml", "value": "HTML/XML"}, 
+			{"key": "css", "value": "CSS"}, 
+			{"key": "java", "value": "Java"}, 
+			{"key": "kotlin", "value": "Kotlin"}, 
+			{"key": "rust", "value": "Rust"}
 		]
 	},
 	{
