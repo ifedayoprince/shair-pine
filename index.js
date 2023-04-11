@@ -36,9 +36,11 @@ async function indexFile(req, res) {
 	
 	params.langCode = data.params.lang;
 	params.lang = langs[data.params.lang];
-	
+	if(data.params.fname) {
 	params.name = (data.params.fname.split('.')[0]).toLowerCase() + "." + data.params.lang;
-	
+	} else {
+		params.name = 'anonymous.'+data.params.lang;
+	}
 	data = (await newAxe.get(`https://api-pinocchio.cyclic.app/pine/notes/${data.params.note}`)).data
 	params.code = data.content;
 	params.date = data.created.substring(0,10).replace(/\-/g, "/");
