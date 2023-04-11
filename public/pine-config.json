@@ -1,7 +1,7 @@
 {
 	"name": "ShAir",
-	"version": "1.0.0", 
+	"version": "1.2.2", 
 	"icon": "%URL%/assets/icon.png", 
-	"description": "Share files through Facebook.", 
+	"description": "Share code on Facebook.", 
 	"author": "Pinocchio Team"
 }
