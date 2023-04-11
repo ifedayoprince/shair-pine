@@ -45,6 +45,7 @@ async function indexFile(req, res) {
 	
 	res.render('index', {params})
 	} catch (e) {
+		console.log(`GET ${e.message}`)
 		res.render('error')
 	}
 }
