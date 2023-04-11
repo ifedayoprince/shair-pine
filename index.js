@@ -36,7 +36,7 @@ async function indexFile(req, res) {
 	params.langCode = data.params.lang;
 	params.lang = langs[data.params.lang];
 	
-	params.name = (data.params.fname.split('.')[0]).toLowerCase() + data.params.lang;
+	params.name = (data.params.fname.split('.')[0]).toLowerCase() + "." + data.params.lang;
 	
 	data = (await newAxe.get(`https://api-pinocchio.cyclic.app/pine/notes/${data.params.note}`)).data
 	params.code = data.content;
