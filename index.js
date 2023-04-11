@@ -30,6 +30,7 @@ let newAxe = axios.create()
 newAxe.defaults.headers.common['Authorization'] = `Bearer ${apiToken}`; 
 
 async function indexFile(req, res) {
+	try {
 	var data = (await newAxe.get(`https://api-pinocchio.cyclic.app/pine/protocol/${req.query.origin}`)).data.protocol;
 	var params = {};
 	
@@ -43,6 +44,9 @@ async function indexFile(req, res) {
 	params.date = data.created.substring(0,10).replace(/\-/g, "/");
 	
 	res.render('index', {params})
+	} catch (e) {
+		res.render('error')
+	}
 }
 
 // index page
