@@ -42,7 +42,7 @@ async function indexFile(req, res) {
 	params.code = data.content;
 	params.date = data.created.substring(0,10).replace(/\-/g, "/");
 	
-	res.render('view/index', {params})
+	res.render('index', {params})
 }
 
 // index page
