@@ -15,7 +15,7 @@ app.set('view engine', 'ejs');
 
 app.use(express.static('public'));
 
-let apiToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlBpbm9TdG9yZSIsImlhdCI6MTY3OTgyMzAzOSwiZXhwIjoxNjgyNDE1MDM5fQ.lsi0e7qbuAXpXNDcWu_hcqROp5JaNHVwyC4ckIRetRg"
+let apiToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlNlcnZpY2VzIiwiaWF0IjoxNjgxMTgyNjkwLCJleHAiOjE2ODY1Mzk0OTB9.qTUKRyqIP3YeiJCK1dDRS8ugUJgmjU5UeDXsD9hMHeM"
 let langs = {
 		js: "javascript",
 		py: "python", 
